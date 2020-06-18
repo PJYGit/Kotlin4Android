@@ -4,9 +4,9 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 # Learning process
 2020/06/17 Weather APP created
 
-2020/06/18 Kotlin docs -> 0 util Basics
+2020/06/18 Kotlin docs -> 0 until Basics + Basics..ClassAndObjectives.SealedClass
 
-# References：
+# References
 https://wangjiegulu.gitbooks.io/kotlin-for-android-developers-zh/content
 
 https://www.kotlincn.net/docs/reference/android-overview.html
