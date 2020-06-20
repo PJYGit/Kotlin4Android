@@ -10,13 +10,14 @@ import com.example.weatherapp.R
 import com.example.weatherapp.extensions.ctx
 import com.example.weatherapp.domain.ForecastList
 import com.example.weatherapp.domain.ModelForecast
+import com.example.weatherapp.extensions.toast
 import com.squareup.picasso.Picasso
 
 public interface OnItemClickListener {
     operator fun invoke(forecast: ModelForecast)
 }
 
-class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: OnItemClickListener) :
+class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: (ModelForecast) -> Unit) :
     RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.ctx)
@@ -32,7 +33,9 @@ class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: OnItemC
     }
 
     override fun getItemCount(): Int = weekForecast.size()
-    class ViewHolder(view: View, val itemClick: OnItemClickListener) :
+
+
+    class ViewHolder(view: View, val itemClick: (ModelForecast) -> Unit) :
         RecyclerView.ViewHolder(view) {
         private val iconView: ImageView
         private val dateView: TextView
@@ -55,7 +58,7 @@ class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: OnItemC
                 descriptionView.text = description
                 maxTemperatureView.text = "${high.toString()}"
                 minTemperatureView.text = "${low.toString()}"
-                itemView.setOnClickListener { itemClick(forecast) }
+                itemView.setOnClickListener { itemClick(this) }
             }
         }
     }

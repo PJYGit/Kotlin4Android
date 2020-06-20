@@ -29,12 +29,7 @@ class MainActivity : AppCompatActivity() {
             println("Response received")
             withContext(Dispatchers.Main)
             {
-                forecastList.adapter = ForecastListAdapter(result,
-                    object : OnItemClickListener {
-                        override fun invoke(forecast: ModelForecast) {
-                            toast(forecast.date)
-                        }
-                    })
+                forecastList.adapter = ForecastListAdapter(result) { toast(it.date) }
             }
         }
     }
