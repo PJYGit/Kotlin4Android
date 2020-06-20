@@ -17,6 +17,8 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 
 2020/06/19 Kotlin docs -> above..ClassAndObjectives done..FuncAndLambda..Collections
 
+2020/06/20 TODO: coroutines
+
 **Kotlin docs done for now, enough for current usage**
 
 **Remark: **no specific notes for language learning of kotlin
@@ -31,7 +33,7 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 RecyclerView
 ```
 
-2020/06/20 data classes & network part & thread (using Anko)
+2020/06/20 data classes & network part & click listenser
 
 # References
 
