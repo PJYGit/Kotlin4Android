@@ -1,4 +1,4 @@
-package com.example.weatherapp
+package com.example.weatherapp.adapter
 
 import android.view.ViewGroup
 import android.widget.TextView
@@ -10,7 +10,9 @@ class ForecastListAdapter(val items: List<String>) :
         parent: ViewGroup, viewType:
         Int
     ): ViewHolder {
-        return ViewHolder(TextView(parent.context))
+        return ViewHolder(
+            TextView(parent.context)
+        )
     }
 
     override fun onBindViewHolder(

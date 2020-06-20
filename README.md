@@ -12,6 +12,10 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 
 **Kotlin docs done for now, enough for current usage**
 
+**Remark: **no specific notes for language learning of kotlin
+
+**Android started**
+
 # References
 
 《第一行代码 Android 3rd Edition》郭霖著
