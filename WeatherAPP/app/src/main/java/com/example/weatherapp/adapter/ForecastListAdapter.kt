@@ -10,7 +10,7 @@ import com.example.weatherapp.R
 import com.example.weatherapp.extensions.ctx
 import com.example.weatherapp.domain.ForecastList
 import com.example.weatherapp.domain.ModelForecast
-import com.example.weatherapp.extensions.toast
+import kotlinx.android.synthetic.main.item_forecast.view.*
 import com.squareup.picasso.Picasso
 
 public interface OnItemClickListener {
@@ -37,27 +37,14 @@ class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: (ModelF
 
     class ViewHolder(view: View, val itemClick: (ModelForecast) -> Unit) :
         RecyclerView.ViewHolder(view) {
-        private val iconView: ImageView
-        private val dateView: TextView
-        private val descriptionView: TextView
-        private val maxTemperatureView: TextView
-        private val minTemperatureView: TextView
-
-        init {
-            iconView = view.findViewById(R.id.icon)
-            dateView = view.findViewById(R.id.date)
-            descriptionView = view.findViewById(R.id.description)
-            maxTemperatureView = view.findViewById(R.id.maxTemperature)
-            minTemperatureView = view.findViewById(R.id.minTemperature)
-        }
 
         fun bindForecast(forecast: ModelForecast) {
             with(forecast) {
-                Picasso.with(itemView.ctx).load(iconUrl).into(iconView)
-                dateView.text = date
-                descriptionView.text = description
-                maxTemperatureView.text = "${high.toString()}"
-                minTemperatureView.text = "${low.toString()}"
+                Picasso.with(itemView.ctx).load(iconUrl).into(itemView.icon)
+                itemView.date.text = date
+                itemView.description.text = description
+                itemView.maxTemperature.text = "${high.toString()}"
+                itemView.minTemperature.text = "${low.toString()}"
                 itemView.setOnClickListener { itemClick(this) }
             }
         }
