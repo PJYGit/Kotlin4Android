@@ -17,7 +17,7 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 
 2020/06/19 Kotlin docs -> above..ClassAndObjectives done..FuncAndLambda..Collections
 
-2020/06/20 TODO: coroutines
+2020/06/20 Kotlin docs -> Coroutines
 
 **Kotlin docs done for now, enough for current usage**
 
