@@ -2,7 +2,14 @@
 Self-learning reposiitory of kotlin for Android Programming including some simple projects.
 
 # Learning process
+
+***Android started***
+
+---
+
 2020/06/17 Weather App created
+
+----
 
 **Kotlin docs started**
 
@@ -14,7 +21,17 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 
 **Remark: **no specific notes for language learning of kotlin
 
-**Android started**
+---
+
+**Weather app started**
+
+---
+
+```kotlin
+RecyclerView
+```
+
+2020/06/20 data classes & network part & thread (using Anko)
 
 # References
 
