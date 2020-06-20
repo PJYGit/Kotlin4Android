@@ -35,6 +35,10 @@ RecyclerView
 
 2020/06/20 data classes & network part & click listenser & coroutines
 
+Using lambda Expr. and extentions to simplify the code.
+
+2020/06/21 TODO: Application
+
 # References
 
 《第一行代码 Android 3rd Edition》郭霖著
