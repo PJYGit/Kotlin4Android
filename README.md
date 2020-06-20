@@ -33,7 +33,7 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 RecyclerView
 ```
 
-2020/06/20 data classes & network part & click listenser
+2020/06/20 data classes & network part & click listenser & coroutines
 
 # References
 
