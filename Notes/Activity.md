@@ -2,6 +2,8 @@
 
 [TOC]
 
+**Codes Directory: FirstLineOfCode/Activity**
+
 ## Layout
 
 activity_*.xml
@@ -39,7 +41,12 @@ activity_*.xml
 ## 在AndroidManifest.xml注册Activity
 
 ~~~xml
-
+<activity android:name=".MainActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
 ~~~
 
 ## Activity中使用Toast
@@ -47,33 +54,61 @@ activity_*.xml
 Toast是一种很好的向用户提示短小并且短时间的信息的方式（如点击按钮提示）。
 
 ~~~kotlin
-
+// context + msg + showing time: LENGTH_SHORT/LONG
+Toast.makeText(this, "Hey! Don't touch me!",Toast.LENGTH_SHORT).show()
 ~~~
 
 ## Simplify findViewById() in Activity
 
 ~~~groovy
-
+// Project build.gradle -> 引入extension
+classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
 ~~~
 
 ~~~kotlin
-
+import kotlinx.android.synthetic.main.activity_main.*
 ~~~
 
 After this, then you can delete all the find functions in your codes by using the id directly.
 
 ## Activity中使用Menu
 
-Directory: FirstLineOfCode/Activity
-
 ~~~xml
-
+<!-- create the menu directory and file in /res/menu/main.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add_item"
+        android:title="Add" />
+    <item
+        android:id="@+id/remove_item"
+        android:title="Remove" />
+</menu>
 ~~~
 
 override functions
 
 ~~~kotlin
+// create the menu
+override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    menuInflater.inflate(R.menu.main, menu)
+    return true
+}
 
+// action listener
+override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    when (item.itemId) {
+        R.id.add_item -> Toast.makeText(
+            this, "You added an item",
+            Toast.LENGTH_SHORT
+        ).show()
+        R.id.remove_item -> Toast.makeText(
+            this, "You removed an item",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
+    return true
+}
 ~~~
 
 ## 销毁一个Activity
