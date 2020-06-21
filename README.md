@@ -43,7 +43,11 @@ Using lambda Expr. and extentions to simplify the code.
 
 ---
 
-**《第一行代码》started**
+**《第一行代码》started --- with bilingual version of notes and source codes**
+
+~~~
+2020/06/21 Android Basics -> /Notes/Basics.md
+~~~
 
 
 
