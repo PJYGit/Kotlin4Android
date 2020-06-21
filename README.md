@@ -3,41 +3,51 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 
 # Learning process
 
-***Android started***
-
----
-
-2020/06/17 Weather App created
-
-----
-
-**Kotlin docs started**
-
-2020/06/18 Kotlin docs -> 0..Basics..ClassAndObjectives.SealedClass
-
-2020/06/19 Kotlin docs -> above..ClassAndObjectives done..FuncAndLambda..Collections
-
-2020/06/20 Kotlin docs -> Coroutines
-
-**Kotlin docs done for now, enough for current usage**
-
-**Remark: **no specific notes for language learning of kotlin
+**[Android started]**
 
 ---
 
 **Weather app started**
 
----
-
-```kotlin
+```
 RecyclerView
+
+2020/06/17 Weather App created
 ```
 
+**Kotlin docs started**
+
+```
+2020/06/18 Kotlin docs -> 0..Basics..ClassAndObjectives.SealedClass
+
+2020/06/19 Kotlin docs -> above..ClassAndObjectives done..FuncAndLambda..Collections
+
+2020/06/20 Kotlin docs -> Coroutines
+```
+
+**Kotlin docs done for now, enough for current usage**
+
+**Remark: **no specific notes for language learning of kotlin
+
+```
 2020/06/20 data classes & network part & click listenser & coroutines
 
 Using lambda Expr. and extentions to simplify the code.
 
-2020/06/21 TODO: Application
+2020/06/21 MainApplication
+```
+
+**Weather app closed**
+
+**Remark:** with no database part -> TODO: learning db part
+
+---
+
+**《第一行代码》started**
+
+
+
+
 
 # References
 
