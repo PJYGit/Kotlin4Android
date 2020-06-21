@@ -263,7 +263,11 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 Activity销毁，返回状态丢失的解决方法：
 
 ~~~kotlin
-
+override fun onSaveInstanceState(outState: Bundle) {
+    super.onSaveInstanceState(outState)
+    val state = "All the state information you need to save."
+    outState.putString("state_str", state)
+}
 ~~~
 
 ## Activity启动模式
