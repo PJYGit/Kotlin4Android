@@ -47,9 +47,8 @@ Using lambda Expr. and extentions to simplify the code.
 
 ~~~
 2020/06/21 Android Basics -> /Notes/Basics.md
+           Android Activity -> /Notes/Activity.md & /FirstLineOfCode/Activity
 ~~~
-
-
 
 
 
