@@ -43,7 +43,27 @@ android:+属性，包含字体大小、颜色和对齐方式等等，详细可�
 新的添加事件监听器的方式，通过让activity继承View.OnClickListener实现，可以支持activity中不同控件监听器的统一实现。
 
 ~~~kotlin
+// 继承
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        // 设置监听器
+        button.setOnClickListener(this)
+    }
+
+    // 重写点击事件方法
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            // 获得id以便统一处理
+            R.id.button -> {
+                Log.d("Button", "button clicked")
+            }
+            // else
+        }
+    }
+}
 ~~~
 
 ### EditText
@@ -60,7 +80,8 @@ android:+属性，包含字体大小、颜色和对齐方式等等，详细可�
 获取所输入的文本的方式：
 
 ~~~kotlin
-
+val inputText = editText.text.toString()
+Toast.makeText(this, inputText, Toast.LENGTH_SHORT).show()
 ~~~
 
 ### ImageView
@@ -68,7 +89,12 @@ android:+属性，包含字体大小、颜色和对齐方式等等，详细可�
 将需要使用的图片放置在/res/drawable文件夹下
 
 ~~~xml
-
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    // 目标文件位置
+    android:src="@drawable/stars" />
 ~~~
 
 动态更换图片的方法：
@@ -96,7 +122,11 @@ visible：可见		invisible：不可见，但仍然占据原来位置大小		gon
 可以在xml中使用android:visibility设定也可以在代码中设置，以下为用代码动态设置样例：
 
 ~~~kotlin
-
+if (progressBar.visibility == View.VISIBLE){
+    progressBar.visibility = View.GONE
+} else {
+    progressBar.visibility = View.VISIBLE
+}
 ~~~
 
 在xml中设置进度条样式（默认圈圈），此处设为横向条形 -> 可以设置最大值等属性：
@@ -109,7 +139,7 @@ android:max="100"
 设置进度：
 
 ~~~kotlin
-
+progressBar.progress += 10
 ~~~
 
 ### AlertDialog
@@ -117,7 +147,14 @@ android:max="100"
 一个置于所有元素之上的对话框，可以屏蔽其他控件的交互能力。一般用于提示警告等重要信息。
 
 ~~~kotlin
-
+AlertDialog.Builder(this).apply {
+    setTitle("Warning!")
+    setMessage("You really want to do this?")
+    setCancelable(false)
+    setPositiveButton("OK") { dialog, which -> } // operation after ok
+    setNegativeButton("CANCEL") { dialog, which -> } // operation after cancel
+    show()
+}
 ~~~
 
 ## 基本布局
