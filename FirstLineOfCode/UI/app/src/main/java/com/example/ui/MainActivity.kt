@@ -7,27 +7,55 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ui.adapter.MsgAdapter
+import com.example.ui.entity.Msg
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-    private val items = listOf<String>(
-        "Apple", "Banana", "Orange", "Watermelon", "Pear", "Grape",
-        "Pineapple", "Strawberry", "Cherry", "Mango", "Apple", "Banana", "Orange", "Watermelon",
-        "Pear", "Grape", "Pineapple", "Strawberry", "Cherry", "Mango"
-    )
+class MainActivity : AppCompatActivity(), View.OnClickListener {
+
+    // message list
+    private val msgList = ArrayList<Msg>()
+
+    private var adapter: MsgAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items)
-        listView.adapter = adapter
+        // init the original messages
+        initMsg()
 
-        listView.setOnItemClickListener { _, _, position, _ ->
-            val fruit = items[position]
-            Toast.makeText(this, fruit, Toast.LENGTH_SHORT).show()
+        val layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = layoutManager
+        adapter = MsgAdapter(msgList)
+        recyclerView.adapter = adapter
+        send.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View?) {
+        when (v) {
+            send -> {
+                // get the input message
+                val content = inputText.text.toString()
+                if (content.isNotEmpty()) { // if not empty
+                    val msg = Msg(content, Msg.TYPE_SENT)
+                    msgList.add(msg)
+
+                    // notify the adapter that a new item is inserted
+                    adapter?.notifyItemInserted(msgList.size - 1)
+                    // scroll to the last item
+                    recyclerView.scrollToPosition(msgList.size - 1)
+                    inputText.setText("")
+                }
+            }
         }
     }
 
-
+    private fun initMsg() {
+        msgList.add(Msg("Hey, how you doing these days?", Msg.TYPE_RECEIVED))
+        msgList.add(Msg("Oh, pretty good! How about you?", Msg.TYPE_SENT))
+        msgList.add(Msg("Not so well, got a lot of work to do!", Msg.TYPE_RECEIVED))
+        Log.d("Msg", "${msgList.size} original messages added.")
+    }
 }
