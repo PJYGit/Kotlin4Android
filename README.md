@@ -1,6 +1,10 @@
 # Kotlin4Android
 Self-learning reposiitory of kotlin for Android Programming including some simple projects.
 
+The source codes of different parts can be seen at directory /FirstLineOfCode/*. I deleted some procedural codes cause it's too simple which means some codes shown in the note-files can't be seen in the projects. The codes remained in the above directory are the ones which are worthwhile to show.
+
+All the notes can be seen at directory /Notes/*.md.
+
 # Learning process
 
 **[Android started]**
@@ -49,7 +53,8 @@ Using lambda Expr. and extentions to simplify the code.
 2020/06/21 Android Basics -> /Notes/Basics.md
            Android Activity -> /Notes/Activity.md & /FirstLineOfCode/Activity
 2020/06/22 Android UI.common components - not done yet
-           -> /Notes/UI.md & /FirstLineOfCode/UI
+2020/06/24 Android UI.Layout & Views - UI done
+                   -> /Notes/UI.md & /FirstLineOfCode/UI
 ~~~
 
 
