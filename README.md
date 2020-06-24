@@ -53,8 +53,9 @@ Using lambda Expr. and extentions to simplify the code.
 2020/06/21 Android Basics -> /Notes/Basics.md
            Android Activity -> /Notes/Activity.md & /FirstLineOfCode/Activity
 2020/06/22 Android UI.common components - not done yet
-2020/06/24 Android UI.Layout & Views - UI done
+2020/06/24 Android UI.Layout & Views & Chat Room Project - UI done
                    -> /Notes/UI.md & /FirstLineOfCode/UI
+                   The chat room project is kind of simple chat room view using recyclerview.
 ~~~
 
 
