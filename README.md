@@ -3,7 +3,7 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 
 The source codes of different parts can be seen at directory /FirstLineOfCode/*. I deleted some procedural codes cause it's too simple which means some codes shown in the note-files can't be seen in the projects. The codes remained in the above directory are the ones which are worthwhile to show.
 
-All the notes can be seen at directory /Notes/*.md.
+All the notes can be seen at directory /Notes/*.md. The notes are too sample for now since I'm a beginner for Android. With the time flying by, it will go deeper.
 
 # Learning process
 
@@ -52,10 +52,16 @@ Using lambda Expr. and extentions to simplify the code.
 ~~~
 2020/06/21 Android Basics -> /Notes/Basics.md
            Android Activity -> /Notes/Activity.md & /FirstLineOfCode/Activity
+                            All the codes for this part are examples, not a project.
+                            
 2020/06/22 Android UI.common components - not done yet
-2020/06/24 Android UI.Layout & Views & Chat Room Project - UI done
+2020/06/24 Android UI.Layout & Views & ChatRoom Project - UI done
                    -> /Notes/UI.md & /FirstLineOfCode/UI
-                   The chat room project is kind of simple chat room view using recyclerview.
+                   The ChatRoom project is kind of simple chat-room-view using recyclerview.
+                   
+2020/06/25 Android Fragment & NewsView project
+                   -> /Notes/Fragment.md & /FirstLineOfCode/Fragment
+                   The NewsView project is a sample example for fragment usage compatible with                      both phones and tablets.
 ~~~
 
 
