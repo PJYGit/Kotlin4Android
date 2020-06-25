@@ -3,7 +3,7 @@ Self-learning reposiitory of kotlin for Android Programming including some simpl
 
 The source codes of different parts can be seen at directory /FirstLineOfCode/*. I deleted some procedural codes cause it's too simple which means some codes shown in the note-files can't be seen in the projects. The codes remained in the above directory are the ones which are worthwhile to show.
 
-All the notes can be seen at directory /Notes/*.md. The notes are too sample for now since I'm a beginner for Android. With the time flying by, it will go deeper.
+All the notes can be seen at directory /Notes/*.md. The notes are too simple for now since I'm a beginner for Android. With the time flying by, it will go deeper.
 
 # Learning process
 
@@ -61,7 +61,13 @@ Using lambda Expr. and extentions to simplify the code.
                    
 2020/06/25 Android Fragment & NewsView project
                    -> /Notes/Fragment.md & /FirstLineOfCode/Fragment
-                   The NewsView project is a sample example for fragment usage compatible with                      both phones and tablets.
+                   The NewsView project is a simple example for fragment usage compatible with
+                   both phones and tablets.
+                   
+           Adnroid Broadcast & ForceOffline project
+                   -> /Notes/Broadcast.md & /FirstLineOfCode/Broadcast
+                   The ForceOffline project only contains one login page and one main page, 
+                   using broadcast to force the logined user to be offline.
 ~~~
 
 
