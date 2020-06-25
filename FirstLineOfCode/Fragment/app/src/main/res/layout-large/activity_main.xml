@@ -2,23 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newsTitleLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
     <fragment
-        android:id="@+id/leftFragment"
-        android:name="com.example.fragment.fragment.LeftFragment"
+        android:id="@+id/newsTitleFrag"
+        android:name="com.example.fragment.fragment.NewsTitleFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />
 
-    <fragment
-        android:id="@+id/rightFragment"
-        android:name="com.example.fragment.fragment.RightFragment"
+    <FrameLayout
+        android:id="@+id/newsContentLayout"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="2" />
+        android:layout_weight="3">
+
+        <fragment
+            android:id="@+id/newsContentFrag"
+            android:name="com.example.fragment.fragment.NewsContentFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
 
 </LinearLayout>
