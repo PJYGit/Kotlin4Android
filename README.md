@@ -68,6 +68,9 @@ Using lambda Expr. and extentions to simplify the code.
                    -> /Notes/Broadcast.md & /FirstLineOfCode/Broadcast
                    The ForceOffline project only contains one login page and one main page, 
                    using broadcast to force the logined user to be offline.
+                   
+2020/06/26 Android Storage -> /Notes/Storage.md & /FirstLineOfCode/Storage
+                           All the codes for this part are examples, not a project.
 ~~~
 
 
