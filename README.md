@@ -71,6 +71,8 @@ Using lambda Expr. and extentions to simplify the code.
                    
 2020/06/26 Android Storage -> /Notes/Storage.md & /FirstLineOfCode/Storage
                            All the codes for this part are examples, not a project.
+                           
+           Android ContentProvider.Runtime-Permission & ContentResolver - not done yet
 ~~~
 
 
