@@ -258,3 +258,22 @@ cursor.close()
 ---
 
 **Remark：**所有的操作其实均可以使用SQL语句进行 -> db.execSQL("sql")，查询例外 -> db.rawQuery("sql", null)
+
+---
+
+## 最佳实践
+
+### 使用事务
+
+确保一系列操作的原子性，利用transaction相关函数。
+
+```kotlin
+val db = dbHelper.writableDatabase
+```
+
+若在try语段中出现异常，则所有的操作都会被取消。
+
+### 升级数据库最佳写法
+
+onUpgrade()方法中添加if语句判断数据库版本号，不同覆盖形式，不同操作。
+
