@@ -38,7 +38,7 @@ if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)
 ) { // 未允许，运行中申请权限  1->requestCode 唯一即可
     ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), 1)
 } else { // 允许，执行操作
-    call()
+    call() // readContacts()
 }
 ```
 
@@ -54,7 +54,7 @@ override fun onRequestPermissionsResult(
     when (requestCode) {
         1 -> {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) { // 允许
-                call()
+                call() // readContacts()
             } else { // 不允许
                 Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show()
             }
@@ -86,5 +86,37 @@ val cursor = contentResolver.query(uir, projection, selection, selectionArgs,sor
 // insert() delete() update()略
 ```
 
+### 读取系统联系人
 
+一个使用小例子
+
+```kotlin
+private fun readContacts() {
+    contentResolver.query(
+        ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+        null,
+        null,
+        null,
+        null
+    )?.apply {
+        while (moveToNext()) {
+            val name =
+                getString(getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME))
+            val number =
+                getString(getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+            contactsList.add("$name\n$number")
+        }
+        adapter.notifyDataSetChanged()
+        close()
+    }
+}
+```
+
+## 创建自己的ContentProvider
+
+与之前的SQLite的MyDatabaseHelper一起使用。
+
+创建DatabaseProvider : ContentProvider(){}，用到uriMatcher重写方法。
+
+// TODO：Fill the codes.
 
