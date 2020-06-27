@@ -73,6 +73,13 @@ Using lambda Expr. and extentions to simplify the code.
                            All the codes for this part are examples, not a project.
                            
            Android ContentProvider.Runtime-Permission & ContentResolver - not done yet
+2020/06/27 Android ContentProvider.MyContentProvider - ContentProvider done
+                   -> /Notes/ContentProvider.md & /FirstLineOfCode/ContentProvider
+                    All the codes for this part are examples, not a project.
+                    
+           Android Media -> /Notes/Media.md & /FirstLineOfCode/Media
+                   Only basic knowledge, to be gone deeper into.
+                   All the codes for this part are examples, not a project.
 ~~~
 
 
